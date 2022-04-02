@@ -8,3 +8,11 @@ body {
     sans-serif;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.gradientBox{
+  background: rgb(225,238,0);
+background: -moz-linear-gradient(90deg, rgba(225,238,0,1) 0%, rgba(0,242,235,1) 100%, rgba(252,70,107,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(225,238,0,1) 0%, rgba(0,242,235,1) 100%, rgba(252,70,107,1) 100%);
+background: linear-gradient(90deg, rgba(225,238,0,1) 0%, rgba(0,242,235,1) 100%, rgba(252,70,107,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1ee00",endColorstr="#fc466b",GradientType=1);
+}

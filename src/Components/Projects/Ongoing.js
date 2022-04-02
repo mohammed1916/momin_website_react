@@ -25,9 +25,9 @@ export default function Ongoing() {
                 <Container sx={{ width: '100%' }}>
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'34px'} color={'orange'} pt={{ xs: 1, sm: 2 }}>Projets</Typography>
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 1, sm: 2 }}>Ongoing</Typography>
-                    <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#cab390'} borderRadius={'20px'} padding={'10px'}>
+                    <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#ebfffa'} borderRadius={'20px'} padding={'10px'}>
                         {cards.map((cardImg, index) => (
-                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px' }}>
+                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px' }} className={'gradientBox'}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
