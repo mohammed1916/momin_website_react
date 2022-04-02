@@ -38,9 +38,9 @@ export default function Completed() {
                 <Container sx={{ width: '100%' }}>
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'34px'} color={'orange'} pt={{ xs: 1, sm: 2 }}>Projets</Typography>
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 1, sm: 2 }}>Completed</Typography>
-                    <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#cab390'} borderRadius={'20px'} padding={'10px'}>
+                    <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#ebfffa'} borderRadius={'20px'} padding={'10px'}>
                         {cards.map((cardImg, index) => (
-                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px' }}>
+                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', ":hover": "boxShadow: 0 15px 70px -12px rgba(0,0,0,0.3)" }} className={'gradientBox'} >
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
@@ -48,10 +48,10 @@ export default function Completed() {
                                         image={cardImg}
                                     />
                                     <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
+                                        <Typography color={'white'} gutterBottom variant="h5" component="div" textAlign={'center'}>
                                             {cardName[index]}
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" textAlign={'center'}>
+                                        <Typography color={'white'} variant="body2" textAlign={'center'}>
                                             {cardAddress[index]}
                                         </Typography>
                                     </CardContent>
