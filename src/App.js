@@ -12,9 +12,9 @@ export default function App() {
       <ResponsiveAppBar />
       <Routes>
         <Route>
-          <Route path="/home" exact element={<Start />} />
+          <Route path="/" exact element={<Start />} />
           <Route path="/about" element={<About />} />
-          <Route path="/:site/site" element={<Site />} />
+          <Route path="/site/:site" element={<Site />} />
         </Route>
       </Routes>
       <Footer />
