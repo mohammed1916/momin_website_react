@@ -13,7 +13,7 @@ const cards = [moimnElan];
 const cardName = ["Momin Elan"];
 const cardAddress = ["Shivajinagar, Bangalore"];
 
-export default function Ongoing() {
+export default function Site() {
 
     return (
         <>
