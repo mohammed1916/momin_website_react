@@ -46,17 +46,19 @@ export default function Site() {
                     <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
                         <h2 className="text-5xl font-extrabold text-gray-900 text-center">Site Images</h2>
 
-                        <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
+                        <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+
                             {cards.map((cardImg, index) => (
-                                <div key={cardImg} className="group relative">
-                                    <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                                <div key={cardImg}>
+                                    <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
                                         <img
                                             src={cardImg}
-                                            className="object-scale-down h-48 w-96"
+                                            className=" w-full object-center hover:object-scale-down"
                                         />
                                     </div>
                                 </div>
                             ))}
+
                         </div>
                     </div>
                 </div>
