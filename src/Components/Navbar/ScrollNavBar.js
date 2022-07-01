@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,14 +11,15 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-scroll'
 
 import account from '../../img/icons/logo192.png'
 
-const pages = ['Home', 'Ongoing Projects', 'Completed Projects', 'About Us'];
+const pages = ['Ongoing Projects', 'Completed Projects'];
 const settings = ['Contact Us'];
-const links = ['/', "#Ongoing", "#Completed", "/about"]
+const links = ["#Ongoing", "#Completed"]
 
-const ResponsiveAppBar = () => {
+const ScrollNavBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
 	const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -153,4 +153,4 @@ const ResponsiveAppBar = () => {
 		</AppBar>
 	);
 };
-export default ResponsiveAppBar;
+export default ScrollNavBar;

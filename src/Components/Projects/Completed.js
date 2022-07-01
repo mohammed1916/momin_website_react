@@ -36,7 +36,7 @@ export default function Completed() {
     }
 
     return (
-        <>
+        <div id='#Completed'>
             <Box
                 px={{ xs: 3, sm: 10 }}
                 py={{ xs: 5, sm: 10 }}
@@ -68,6 +68,6 @@ export default function Completed() {
                     </Box>
                 </Container>
             </Box>
-        </>
+        </div>
     );
 }

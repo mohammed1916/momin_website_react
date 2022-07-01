@@ -16,7 +16,7 @@ const cardAddress = ["Shivajinagar, Bangalore"];
 export default function Ongoing() {
 
     return (
-        <>
+        <div id='#Ongoing'>
             <Box
                 px={{ xs: 3, sm: 10 }}
                 py={{ xs: 2, sm: 5 }}
@@ -48,6 +48,6 @@ export default function Ongoing() {
                     </Box>
                 </Container>
             </Box>
-        </>
+        </div>
     );
 }
