@@ -17,7 +17,7 @@ import account from '../../img/icons/logo192.png'
 
 const pages = ['Home', 'About Us'];
 const settings = ['Contact Us'];
-const links = ['/home', "/about"]
+const links = ['/', "/about"]
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
