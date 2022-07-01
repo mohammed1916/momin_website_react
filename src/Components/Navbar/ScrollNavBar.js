@@ -70,15 +70,16 @@ const ScrollNavBar = () => {
 	});
 
 	return (
-		<AppBar position="static"
+		<AppBar position='sticky'
 			sx={{
 				bgcolor: (theme) =>
 					theme.palette.mode === 'dark' ? 'black' : '#0101',
 				color: (theme) =>
 					theme.palette.mode === 'dark' ? 'black' : 'green',
+
 			}}>
 			<Container maxWidth="xl">
-				<Toolbar disableGutters>
+				<Toolbar disableGutters variant='dense'>
 					<Breadcrumbs separator="›" aria-label="breadcrumb">
 						{pages.map((page, index) => (
 							<Link to={links[index]} smooth={true} duration={500}>
@@ -93,7 +94,7 @@ const ScrollNavBar = () => {
 					</Breadcrumbs>
 				</Toolbar>
 			</Container>
-		</AppBar>
+		</AppBar >
 	);
 };
 export default ScrollNavBar;
