@@ -11,13 +11,24 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { emphasize, styled } from '@mui/material/styles';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Chip from '@mui/material/Chip';
+import HomeIcon from '@mui/icons-material/Home';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link } from 'react-scroll'
 
 import account from '../../img/icons/logo192.png'
 
-const pages = ['Ongoing Projects', 'Completed Projects'];
-const settings = ['Contact Us'];
-const links = ["#Ongoing", "#Completed"]
+const pages = ['Home', 'Ongoing Projects', 'Completed Projects'];
+const links = ["#Home", "#Ongoing", "#Completed"]
+const icons = [
+	<HomeIcon fontSize="small" />,
+	<QueryBuilderIcon fontSize="small" />,
+	<ConstructionIcon fontSize="small" />,
+]
 
 const ScrollNavBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,6 +49,26 @@ const ScrollNavBar = () => {
 		setAnchorElUser(null);
 	};
 
+	const StyledBreadcrumb = styled(Chip)(({ theme }) => {
+		const backgroundColor =
+			theme.palette.mode === 'light'
+				? theme.palette.grey[100]
+				: theme.palette.grey[800];
+		return {
+			backgroundColor,
+			height: theme.spacing(3),
+			color: theme.palette.text.primary,
+			fontWeight: theme.typography.fontWeightRegular,
+			'&:hover, &:focus': {
+				backgroundColor: emphasize(backgroundColor, 0.06),
+			},
+			'&:active': {
+				boxShadow: theme.shadows[1],
+				backgroundColor: emphasize(backgroundColor, 0.12),
+			},
+		};
+	});
+
 	return (
 		<AppBar position="static"
 			sx={{
@@ -48,106 +79,18 @@ const ScrollNavBar = () => {
 			}}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					<Typography
-						variant="h6"
-						noWrap
-						component="div"
-						sx={{ mr: 5, display: { xs: 'none', md: 'flex' }, fontFamily: 'Cinzel Decorative' }}
-					>
-						Momin Developers
-					</Typography>
-
-					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-						<IconButton
-							size="large"
-							aria-label="account of current user"
-							aria-controls="menu-appbar"
-							aria-haspopup="true"
-							onClick={handleOpenNavMenu}
-							color="inherit"
-						>
-							<MenuIcon />
-						</IconButton>
-						<Menu
-							id="menu-appbar"
-							anchorEl={anchorElNav}
-							anchorOrigin={{
-								vertical: 'bottom',
-								horizontal: 'left',
-							}}
-							keepMounted
-							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'left',
-							}}
-							open={Boolean(anchorElNav)}
-							onClose={handleCloseNavMenu}
-							sx={{
-								display: { xs: 'block', md: 'none' },
-							}}
-						>
-							{pages.map((page, index) => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign="center">
-										<Link to={links[index]}>
-											{page}
-										</Link>
-									</Typography>
-								</MenuItem>
-							))}
-						</Menu>
-					</Box>
-					<Typography
-						variant="p"
-						noWrap
-						component="div"
-						sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-					>
-						Momin Developers
-					</Typography>
-					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+					<Breadcrumbs separator="›" aria-label="breadcrumb">
 						{pages.map((page, index) => (
-							<Button
-								key={page}
-								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: 'black', display: 'block' }}
-							>
-								<Link to={links[index]}>
-									{page}
-								</Link>
-							</Button>
+							<Link to={links[index]} smooth={true} duration={500}>
+								<StyledBreadcrumb
+									key={page}
+									component="a"
+									label={page}
+									icon={icons[index]}
+								/>
+							</Link>
 						))}
-					</Box>
-
-					<Box sx={{ flexGrow: 0 }}>
-						<Tooltip title="Contact Us">
-							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-								<Avatar alt="Contact" src={account} variant="square" />
-							</IconButton>
-						</Tooltip>
-						<Menu
-							sx={{ mt: '45px' }}
-							id="menu-appbar"
-							anchorEl={anchorElUser}
-							anchorOrigin={{
-								vertical: 'top',
-								horizontal: 'right',
-							}}
-							keepMounted
-							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'right',
-							}}
-							open={Boolean(anchorElUser)}
-							onClose={handleCloseUserMenu}
-						>
-							{settings.map((contact, index) => (
-								<MenuItem key={contact} onClick={handleCloseUserMenu}>
-									<Typography textAlign="center"><Link to={links[index]}>{contact}</Link></Typography>
-								</MenuItem>
-							))}
-						</Menu>
-					</Box>
+					</Breadcrumbs>
 				</Toolbar>
 			</Container>
 		</AppBar>

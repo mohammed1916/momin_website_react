@@ -6,7 +6,7 @@ import decoration from '../../img/decoration/decoration1.png'
 export default function Home() {
 
     return (
-        <>
+        <div id="#Home">
             <Box
                 mx={{ xs: 3, sm: 10 }}
                 my={{ xs: 2, sm: 5 }}
@@ -23,6 +23,6 @@ export default function Home() {
                     </Box>
                 </Container>
             </Box>
-        </>
+        </div>
     );
 }
