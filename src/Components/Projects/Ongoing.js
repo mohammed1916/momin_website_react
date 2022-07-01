@@ -16,15 +16,15 @@ const cardAddress = ["Shivajinagar, Bangalore"];
 export default function Ongoing() {
 
     return (
-        <>
+        <div id='#Ongoing'>
             <Box
                 px={{ xs: 3, sm: 10 }}
-                py={{ xs: 5, sm: 10 }}
+                py={{ xs: 2, sm: 5 }}
                 bgcolor={'white'}
                 color={'white'} >
                 <Container sx={{ width: '100%' }}>
-                    <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'34px'} color={'orange'} pt={{ xs: 1, sm: 2 }}>Projets</Typography>
-                    <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 1, sm: 2 }}>Ongoing</Typography>
+                    <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'34px'} color={'orange'} pt={{ xs: 0.5, sm: 1 }}>Projets</Typography>
+                    <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 0.5, sm: 2 }}>Ongoing</Typography>
                     <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#ebfffa'} borderRadius={'20px'} padding={'10px'}>
                         {cards.map((cardImg, index) => (
                             <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px' }} className={'gradientBox'}>
@@ -48,6 +48,6 @@ export default function Ongoing() {
                     </Box>
                 </Container>
             </Box>
-        </>
+        </div>
     );
 }
