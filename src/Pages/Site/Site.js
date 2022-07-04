@@ -23,9 +23,16 @@ import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
 import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
 import interior from '../../img/projects/interior/9.jpeg'
 
+import { projects } from '../../projects.js'
+
+
 const cards = [kamaraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
 
 
+function getURLUsername(siteName) {
+    const n = siteName.lastIndexOf('/');
+    return (n != -1) ? siteName.substring(n + 1) : siteName;
+}
 function getUsername(siteName) {
     const n = siteName.lastIndexOf('/');
     return (n != -1) ? siteName.substring(n + 1).replace("%20", " ") : siteName;
@@ -34,8 +41,10 @@ function getUsername(siteName) {
 export default function Site() {
     // const params = useParams();
     // var siteName = params.username;
-    console.log("this.props.userID", getUsername(window.location.pathname));
+    // console.log("this.props.userID", getUsername(window.location.pathname));
     var siteName = getUsername(window.location.pathname);
+    var siteURLName = getURLUsername(window.location.pathname);
+    console.log("siteURLName", getUsername(siteURLName));
 
     return (
         <>
@@ -48,7 +57,7 @@ export default function Site() {
 
                         <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
-                            {cards.map((cardImg, index) => (
+                            {projects["Projects"][siteURLName].map((cardImg, index) => (
                                 <div key={cardImg}>
                                     <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
                                         <img
