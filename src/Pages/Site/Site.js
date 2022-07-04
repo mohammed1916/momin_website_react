@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box'
 import { useParams } from "react-router-dom";
 
-import kamaraniKaizenTirunelveli from '../../img/projects/kamaraniKaizenTirunelveli/2.jpeg'
+import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2.jpeg'
 import basavanagudi from '../../img/projects/basavanagudi/1.jpg'
 import greenEnclave from '../../img/projects/greenEnclave/1.JPG'
 import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/1.jpeg'
@@ -26,7 +26,7 @@ import interior from '../../img/projects/interior/9.jpeg'
 import { projects } from '../../projects.js'
 
 
-const cards = [kamaraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
+const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
 
 
 function getURLUsername(siteName) {

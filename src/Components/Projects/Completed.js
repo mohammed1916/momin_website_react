@@ -9,7 +9,7 @@ import {
     useNavigate
 } from "react-router-dom";
 
-import kamaraniKaizenTirunelveli from '../../img/projects/kamaraniKaizenTirunelveli/2.jpeg'
+import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2.jpeg'
 import basavanagudi from '../../img/projects/basavanagudi/1.jpg'
 import greenEnclave from '../../img/projects/greenEnclave/1.JPG'
 import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/1.jpeg'
@@ -25,8 +25,8 @@ import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
 import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
 import interior from '../../img/projects/interior/9.jpeg'
 
-const cards = [kamaraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
-const cardName = ["Kamarani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR", "Lingarajpuram", "Loyd's Road", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Mosque Road", "Interior"];
+const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
+const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR", "Lingarajpuram", "Loyd's Road", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Mosque Road", "Interior"];
 const cardAddress = ["Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Chennai, Tamil Nadu", "Ganganagar, Bangalore", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Vadapalini, Chennai", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka"];
 
 export default function Completed() {
