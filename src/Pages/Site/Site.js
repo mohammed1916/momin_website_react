@@ -23,7 +23,8 @@ import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
 import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
 import interior from '../../img/projects/interior/9.jpeg'
 
-import { projects } from '../../projects.js'
+import { projects } from '../../store/projects.js'
+import { pdf } from '../../store/pdf.js'
 
 
 const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
@@ -70,6 +71,20 @@ export default function Site() {
 
                         </div>
                     </div>
+                    {(typeof (pdf["pdf"][siteURLName]) !== 'undefined')
+                        ?
+                        <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+                            <h2 className="text-5xl font-extrabold text-gray-900 text-center">Brochure</h2>
+                            <div>
+                                <object data={pdf["pdf"][siteURLName]} type="application/pdf" width="100%" height="700px">
+                                    <p>Pdf View is not compatible with this browser</p>
+                                </object>
+                            </div>
+                        </div>
+                        :
+                        <div>
+                        </div>
+                    }
                 </div>
             </div>
         </>
