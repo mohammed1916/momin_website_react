@@ -51,7 +51,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1ee00",endCo
 .card__icon {
   position: relative;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
 }
 
 .card__link::after {
@@ -96,9 +95,12 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* CARD BACKGROUNDS */
+.card-0 {
+  background: radial-gradient(#F69A97, #FB76C1);
+}
 
 .card-1 {
-  background: radial-gradient(#CEE26B, #5CB270);
+  background: radial-gradient(#5df0ee, #56a8a1);
 }
 
 .card-2 {
