@@ -25,6 +25,7 @@ import interior from '../../img/projects/interior/9.jpeg'
 
 import { projects } from '../../store/projects.js'
 import { pdf } from '../../store/pdf.js'
+import { brocher } from '../../store/brochers.js'
 
 
 const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
@@ -71,15 +72,42 @@ export default function Site() {
 
                         </div>
                     </div>
+                    {(typeof (pdf["pdf"][siteURLName]) !== 'undefined' || typeof (brocher["brocher"][siteURLName]) !== 'undefined')
+                        ?
+                        <div className="max-w-2xl mx-auto pt-16 pb-3 sm:pt-24 sm:pb-5 lg:pt-32 lg:pb-7 lg:max-w-none">
+                            <h2 className="text-5xl font-extrabold text-gray-900 text-center">Brochure</h2>
+                        </div>
+                        :
+                        <div>
+                        </div>
+                    }
                     {(typeof (pdf["pdf"][siteURLName]) !== 'undefined')
                         ?
-                        <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-                            <h2 className="text-5xl font-extrabold text-gray-900 text-center">Brochure</h2>
+                        <div className="max-w-2xl mx-auto pb-3  sm:pb-5  lg:pb-7 lg:max-w-none">
                             <div>
                                 <object data={pdf["pdf"][siteURLName]} type="application/pdf" width="100%" height="700px">
                                     <p>Pdf View is not compatible with this browser</p>
                                 </object>
                             </div>
+                        </div>
+                        :
+                        <div>
+                        </div>
+                    }
+                    {(typeof (brocher["brocher"][siteURLName]) !== 'undefined')
+                        ?
+                        <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+                            {brocher["brocher"][siteURLName].map((cardImg, index) => (
+                                <div key={cardImg}>
+                                    <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
+                                        <img
+                                            src={cardImg}
+                                            className=" w-full object-center hover:object-scale-down"
+                                            alt='Image View is not compatible with this browser'
+                                        />
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                         :
                         <div>
