@@ -37,6 +37,11 @@ export default function Footer() {
                             </Link>
                         </Box>
                         <Box pt={{ xs: 2, sm: 4 }}>
+                            <Link href="/" color="inherit" underline="hover">
+                                Home
+                            </Link>
+                        </Box>
+                        <Box pt={{ xs: 2, sm: 4 }}>
                             <Link href="/about" color="inherit" underline="hover">
                                 About Us
                             </Link>
