@@ -5,6 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box'
+import {
+    useNavigate
+} from "react-router-dom";
 
 import moimnElan from '../../img/elevation/elevation1.jpg'
 
@@ -14,6 +17,10 @@ const cardName = ["Momin Elan"];
 const cardAddress = ["Shivajinagar, Bangalore"];
 
 export default function Ongoing() {
+    let navigate = useNavigate();
+    const nav = (index) => {
+        navigate(`/site/${index}`)
+    }
 
     return (
         <div id='#Ongoing'>
@@ -27,7 +34,7 @@ export default function Ongoing() {
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 0.5, sm: 2 }}>Ongoing</Typography>
                     <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#ebfffa'} borderRadius={'20px'} padding={'10px'}>
                         {cards.map((cardImg, index) => (
-                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px' }} className={'gradientBox'}>
+                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px' }} className={'gradientBox'} onClick={() => nav(cardName[index])}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
