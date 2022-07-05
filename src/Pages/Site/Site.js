@@ -23,7 +23,7 @@ import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
 import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
 import interior from '../../img/projects/interior/9.jpeg'
 
-import { projects } from '../../projects.js'
+import { projects } from '../../store/projects.js'
 
 
 const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
