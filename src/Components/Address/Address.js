@@ -56,18 +56,17 @@ export default function Address() {
     return (
         <>
             <section id="section1">
-                <div class="card-2 rounded-2xl p-5">
+                <div class="card-2 rounded-2xl p-5 m-2">
                     {(typeof (address[siteURLName]) !== 'undefined')
                         ?
                         <section id="section7" class="card-2 rounded-lg p-2">
-                            <div class="mt-6 flex flex-wrap">
+                            <div class="mt-6 flex flex-wrap flex-row justify-center">
 
-                                <div class="col-md-5 col-md-offset-1 addess-description">
-                                    <span className='text-4xl font-extrabold text-cyan-900'>Momin Elan</span>
-                                    <h2 className='text-2xl font-bold text-cyan-800'>Address</h2>
-                                    <p className='font-semibold text-cyan-700'>Located at the heart of Bengalore.
+                                <div class="p-5 text-center">
+                                    <h2 className='text-5xl font-extrabold text-cyan-900'>Momin Elan's Location</h2>
+                                    <p className='text-1xl font-bold text-cyan-800'>Situated right in the heart of Bengalore.
                                     </p>
-                                    <ul className='text-white font-semibold'>
+                                    <ul className='text-white font-semibold text-left'>
                                         <li class="p-4">
                                             <div class="flex flex-wrap">
                                                 <div class="pr-3">
@@ -100,12 +99,12 @@ export default function Address() {
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6 addess-map">
-                                    {/* <iframe
-                                                                src={address[siteURLName]["src"]}
-                                                                width="100%" height="450" style="border:0;padding-left: 10px;padding-right: 10px;"
-                                                                allowFullScreen="" loading="lazy"></iframe> */}
-                                </div>
+
+                                <iframe
+                                    src={address[siteURLName]["src"]}
+                                    width="100%" height="450"
+                                    allowFullScreen="" aria-hidden="false" tabIndex="0" loading="lazy"></iframe>
+
                             </div>
                         </section>
                         :
