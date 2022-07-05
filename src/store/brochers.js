@@ -5,8 +5,8 @@ export const brocher = {
             require("../img/projects/kamraniKaizenTirunelveli/G.E. - Broucher PG2.jpg"),
         ],
         "Green%20Enclave": [
-            require("../img/projects/greenEnclave/brochers/G.E. - Broucher PG1.jpg"),
-            require("../img/projects/greenEnclave/brochers/G.E. - Broucher PG1.jpg"),
+            require("../img/projects/greenEnclave/broucher/G.E. - Broucher PG1.jpg"),
+            require("../img/projects/greenEnclave/broucher/G.E. - Broucher PG1.jpg"),
         ],
         "Pearl%20Nest": [
             require("../img/projects/pearlNestvadapalinichennai/G1.jpeg"),
