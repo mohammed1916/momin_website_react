@@ -55,9 +55,17 @@ export default function Site() {
             <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 0.5, sm: 2 }}>Completed Project</Typography>
             <div className="bg-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-                        <h2 className="text-5xl font-extrabold text-gray-900 text-center">Site Images</h2>
-
+                    {(typeof (projects["Projects"][siteURLName]) !== 'undefined')
+                        ?
+                        <div className="max-w-2xl mx-auto pt-16 pb-3 sm:pt-24 sm:pb-5 lg:pt-32 lg:pb-7 lg:max-w-none">
+                            <h2 className="text-5xl font-extrabold text-gray-900 text-center"> Site Images</h2>
+                        </div>
+                        :
+                        <div>
+                        </div>
+                    }
+                    {(typeof (projects["Projects"][siteURLName]) !== 'undefined')
+                        ?
                         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
                             {projects["Projects"][siteURLName].map((cardImg, index) => (
@@ -72,7 +80,10 @@ export default function Site() {
                             ))}
 
                         </div>
-                    </div>
+                        :
+                        <div>
+                        </div>
+                    }
                     {(typeof (videos["videos"][siteURLName]) !== 'undefined')
                         ?
                         <div className="max-w-2xl mx-auto pt-16 pb-3 sm:pt-24 sm:pb-5 lg:pt-32 lg:pb-7 lg:max-w-none">
