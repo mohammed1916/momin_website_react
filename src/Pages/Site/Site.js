@@ -26,6 +26,7 @@ import interior from '../../img/projects/interior/9.jpeg'
 import { projects } from '../../store/projects.js'
 import { pdf } from '../../store/pdf.js'
 import { brocher } from '../../store/brochers.js'
+import { videos } from '../../store/videos.js'
 
 
 const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
@@ -57,7 +58,7 @@ export default function Site() {
                     <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
                         <h2 className="text-5xl font-extrabold text-gray-900 text-center">Site Images</h2>
 
-                        <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
                             {projects["Projects"][siteURLName].map((cardImg, index) => (
                                 <div key={cardImg}>
@@ -72,7 +73,36 @@ export default function Site() {
 
                         </div>
                     </div>
-                    {(typeof (pdf["pdf"][siteURLName]) !== 'undefined' || typeof (brocher["brocher"][siteURLName]) !== 'undefined')
+                    {(typeof (videos["videos"][siteURLName]) !== 'undefined')
+                        ?
+                        <div className="max-w-2xl mx-auto pt-16 pb-3 sm:pt-24 sm:pb-5 lg:pt-32 lg:pb-7 lg:max-w-none">
+                            <h2 className="text-5xl font-extrabold text-gray-900 text-center"> Site View</h2>
+                        </div>
+                        :
+                        <div>
+                        </div>
+                    }
+                    {(typeof (videos["videos"][siteURLName]) !== 'undefined')
+                        ?
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                            {videos["videos"][siteURLName].map((cardVideo, index) => (
+                                <div key={cardVideo}>
+                                    <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
+                                        <video width="750" height="500" controls >
+                                            <source
+                                                src={cardVideo}
+                                                alt='Video View is not compatible with this browser'
+                                            />
+                                        </video>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        :
+                        <div>
+                        </div>
+                    }
+                    {(typeof (pdf["pdf"][siteURLName]) !== 'undefined' || typeof (brocher["brocher"][siteURLName]) !== 'undefined' || typeof (videos["videos"][siteURLName]) !== 'undefined')
                         ?
                         <div className="max-w-2xl mx-auto pt-16 pb-3 sm:pt-24 sm:pb-5 lg:pt-32 lg:pb-7 lg:max-w-none">
                             <h2 className="text-5xl font-extrabold text-gray-900 text-center">Brochure</h2>
