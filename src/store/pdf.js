@@ -1,7 +1,7 @@
 export const pdf = {
-    "Projects": {
+    "pdf": {
         "Kamrani%20Kaizen": [
-            require("../img/projects/kamraniKaizenTirunelveli/kamrani kaizen Brochure.pdf"),
+            require("../img/projects/kamraniKaizenTirunelveli/kamranikaizenBrochure.pdf"),
 
         ],
     }
