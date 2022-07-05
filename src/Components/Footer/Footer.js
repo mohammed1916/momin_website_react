@@ -8,6 +8,9 @@ import Typography from '@mui/material/Typography';
 
 import EmailIcon from '@mui/icons-material/Email';
 import email from '../../img/icons/email.png'
+import BusinessRoundedIcon from '@mui/icons-material/BusinessRounded';
+import CallRoundedIcon from '@mui/icons-material/CallRounded';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 /*  */
 export default function Footer() {
 
@@ -27,14 +30,19 @@ export default function Footer() {
                 }} label="Momin Developers" /></Divider>
                 <Grid container spacing={5} pt={{ xs: 2, sm: 4 }} pb={{ xs: 2, sm: 4 }}>
                     <Grid item xs={12} sm={6} pb={{ xs: 2, sm: 4 }}>
-                        <Box borderBottom={2}>Projects</Box>
+                        <Box borderBottom={2}>Website</Box>
                         <Box pt={{ xs: 2, sm: 4 }}>
-                            <Link href="#" color="inherit" underline="hover">
+                            <Link href="/site/Momin%20Elan" color="inherit" underline="hover">
                                 Ongoing Projects
                             </Link>
                         </Box>
                         <Box pt={{ xs: 2, sm: 4 }}>
-                            <Link href="#" color="inherit" underline="hover">
+                            <Link href="/" color="inherit" underline="hover">
+                                Home
+                            </Link>
+                        </Box>
+                        <Box pt={{ xs: 2, sm: 4 }}>
+                            <Link href="/about" color="inherit" underline="hover">
                                 About Us
                             </Link>
                         </Box>
@@ -42,23 +50,36 @@ export default function Footer() {
                     <Grid item xs={12} sm={6}>
                         <Box borderBottom={2}>Get In Touch</Box>
                         <Box pt={{ xs: 2, sm: 4 }}>
-
-                            Office Address:
-                            <br />
-                            <br />
-                            69, 7th Cross, Hennur Main Road, Lingarajapuram, Bangalore 560051
-
+                            <div>
+                                <BusinessRoundedIcon />
+                                <span className="pl-3 p-1 font-semibold">OFFICE ADDRESS:</span>
+                            </div>
+                            <div className="pl-9">
+                                <span>69, 7th Cross, Hennur Main Road, Lingarajapuram, Bangalore 560051</span>
+                            </div>
                         </Box>
                         <Box pt={{ xs: 2, sm: 4 }}>
-                            +91 98450 41161<br />
-                            +91 99453 16717<br />
-                            +91 90943 64248
+                            <div>
+                                <CallRoundedIcon />
+                                <span className="pl-3 p-1">+91 98450 41161</span><br />
+                            </div>
+                            <div>
+                                <CallRoundedIcon />
+                                <span className="pl-3 p-1">+91 99453 16717</span><br />
+                            </div>
+                            <div>
+                                <CallRoundedIcon />
+                                <span className="pl-3 p-1">+91 90943 64248</span><br />
+                            </div>
                         </Box>
-                        <Box pt={{ xs: 2, sm: 4 }}>
-                            <img src={email} height="16px" />
-                            Primary:
-                            <br />
-                            <br /> momindevelopers123@gmail.com
+                        <Box pt={{ xs: 2, sm: 4 }} >
+                            <div>
+                                <EmailRoundedIcon />
+                                <span className="pl-3 p-1 font-semibold">PRIMARY EMAIL:</span>
+                            </div>
+                            <div className="pl-9">
+                                <span >momindevelopers123@gmail.com</span>
+                            </div>
                         </Box>
                     </Grid>
 
