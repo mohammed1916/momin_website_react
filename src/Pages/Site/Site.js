@@ -28,6 +28,7 @@ import { pdf } from '../../store/pdf.js'
 import { brocher } from '../../store/brochers.js'
 import { videos } from '../../store/videos.js'
 import Specification from '../../Components/Specifications/Specifications';
+import Address from '../../Components/Address/Address';
 
 
 const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
@@ -86,6 +87,7 @@ export default function Site() {
                         </div>
                     }
                     <Specification />
+                    <Address />
                     {(typeof (videos["videos"][siteURLName]) !== 'undefined')
                         ?
                         <div className="max-w-2xl mx-auto pt-16 pb-3 sm:pt-24 sm:pb-5 lg:pt-32 lg:pb-7 lg:max-w-none">
