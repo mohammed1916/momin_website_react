@@ -20,23 +20,11 @@ function getURLUsername(siteName) {
 
 export default function Carousal() {
     var siteURLName = getURLUsername(window.location.pathname);
-    console.log("carousal[siteURLName]", carousal[siteURLName]);
-    const images = [
-        {
-            label: 'Momin Developers',
-            imgPath:
-                carousal[siteURLName][0],
-        },
-        {
-            label: 'Momin Elan',
-            imgPath:
-                carousal[siteURLName][1],
-        },
-    ];
+    // console.log("carousal[siteURLName]", carousal[siteURLName]);
 
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = images.length;
+    const maxSteps = carousal[siteURLName].length;
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -54,25 +42,6 @@ export default function Carousal() {
             {(typeof (carousal[siteURLName]) !== 'undefined')
                 ?
                 <section className="flex justify-center p-6">
-                    {/* <div class="main-slider owl-theme owl-carousel">
-                        <div class="single-slide item" style={{ backgroundImage: "url(../../img/decoration/decoration1.png)" }}>
-                            <div class="single-slide item" style={{ backgroundImage: "url(../../img/decoration/decoration2.png)" }}>
-                                <div class="slider-content-area">
-                                    <div class="row">
-                                        <div class="slide-content-wrapper text-center">
-                                            <div class="slide-content">
-                                                <h3>Momin Elan</h3>
-                                                <h2>A project by Momin Developers</h2>
-                                                <p>Shivajinagar, Bangaluru</p>
-                                                <a class="default-btn" href="/site/Momin%20Elan">Learn more</a>
-                                                <img src="../../img/new/icon.png" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                     <Box sx={{ flexGrow: 1 }}>
                         <Paper
                             square
@@ -86,7 +55,7 @@ export default function Carousal() {
                             }}
                         >
 
-                            <Typography ><div className='text-2xl text-cyan-600 font-extrabold'>{images[activeStep].label}</div></Typography>
+                            <Typography ><div className='text-2xl text-cyan-600 font-extrabold'>{carousal[siteURLName][activeStep].label}</div></Typography>
 
                         </Paper>
                         <AutoPlaySwipeableViews
@@ -95,7 +64,7 @@ export default function Carousal() {
                             onChangeIndex={handleStepChange}
                             enableMouseEvents
                         >
-                            {images.map((step, index) => (
+                            {carousal[siteURLName].map((step, index) => (
                                 <div key={step.label}>
                                     {Math.abs(activeStep - index) <= 2 ? (
                                         <Box
