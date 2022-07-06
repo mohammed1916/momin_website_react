@@ -13,13 +13,13 @@ export default function Home() {
                 bgcolor={'white'}
                 color={'white'} >
                 <Container sx={{ width: '100%' }}>
-                    <Box display={'flex'} flexWrap={'wrap'} alignItems={'center'} justifyContent='center' borderRadius={'5px'} margin={'10px'} boxShadow={'0 3px 10px rgb(0 0 0 / 0.2);'} padding={{ xs: 1, sm: 2 }}>
+                    <Box className="rounded-2xl" display={'flex'} flexWrap={'wrap'} alignItems={'center'} justifyContent='center' margin={'10px'} boxShadow={5} padding={{ xs: 1, sm: 2 }}>
                         <Box display={'flex'} flexDirection={'column'} alignSelf={'center'} padding={{ xs: 3, sm: 5 }} >
-                            <Typography textAlign="center" fontFamily={'Righteous'} color={'turquoise'} variant="h3" pt={{ xs: 1, sm: 2 }}>Momin Developers</Typography>
-                            <Typography textAlign="center" fontFamily={'Righteous'} color={'darkturquoise'} variant="h6" pt={{ xs: 1, sm: 2 }}>A subsidiary of Bluechip Constructions</Typography>
-                            <Typography textAlign="center" fontFamily={'Righteous'} color={'aquamarine'} variant="p" pt={{ xs: 1, sm: 2 }}>Serving at Chennai, Bengaluru and Tirunelveli</Typography>
+                            <Typography className='drop-shadow-xl' textAlign="center" fontFamily={'Righteous'} color={'turquoise'} variant="h3" pt={{ xs: 1, sm: 2 }}>Momin Developers</Typography>
+                            <Typography className='drop-shadow-xl' textAlign="center" fontFamily={'Righteous'} color={'darkturquoise'} variant="h6" pt={{ xs: 1, sm: 2 }}>A subsidiary of Bluechip Constructions</Typography>
+                            <Typography className='drop-shadow-xl' textAlign="center" fontFamily={'Righteous'} color={'aquamarine'} variant="p" pt={{ xs: 1, sm: 2 }}>Serving at Chennai, Bengaluru and Tirunelveli</Typography>
                         </Box>
-                        <Box alignSelf={'center'} sx={{ height: "20rem" }} component={'img'} src={decoration} />
+                        <Box className='rounded-2xl' boxShadow={5} alignSelf={'center'} sx={{ height: "20rem" }} component={'img'} src={decoration} />
                     </Box>
                 </Container>
             </Box>
