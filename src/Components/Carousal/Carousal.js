@@ -24,7 +24,6 @@ export default function Carousal() {
 
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = carousal[siteURLName].length;
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -84,14 +83,14 @@ export default function Carousal() {
                             ))}
                         </AutoPlaySwipeableViews>
                         <MobileStepper
-                            steps={maxSteps}
+                            steps={carousal[siteURLName].length}
                             position="static"
                             activeStep={activeStep}
                             nextButton={
                                 <Button
                                     size="small"
                                     onClick={handleNext}
-                                    disabled={activeStep === maxSteps - 1}
+                                    disabled={activeStep === carousal[siteURLName].length - 1}
                                 >
                                     Next
                                     {theme.direction === 'rtl' ? (
