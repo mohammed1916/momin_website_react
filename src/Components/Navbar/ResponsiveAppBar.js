@@ -66,36 +66,34 @@ const ResponsiveAppBar = () => {
 							}}
 						>
 							{pages.map((page, index) => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign="center">
-										<Link to={links[index]}>
+								<Link to={links[index]}>
+									<MenuItem key={page} onClick={handleCloseNavMenu}>
+										<Typography textAlign="center">
 											{page}
-										</Link>
-									</Typography>
-								</MenuItem>
+										</Typography>
+									</MenuItem>
+								</Link>
 							))}
 						</Menu>
 					</Box>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignSelf: 'right', marginLeft: 'auto' }} >
 						{
 							pages.map((page, index) => (
-								<Button
-									key={page}
-									onClick={handleCloseNavMenu}
-									sx={{ my: 2, color: 'black', display: 'block' }}
-								>
-									<Link to={links[index]}>
+								<Link to={links[index]}>
+									<Button
+										key={page}
+										onClick={handleCloseNavMenu}
+										sx={{ my: 2, color: 'black', display: 'block' }}
+									>
 										{page}
-									</Link>
-								</Button>
+									</Button>
+								</Link>
 							))
 						}
 					</Box>
 					<Box sx={{ flexGrow: 0 }}>
 						<img alt="Icon" src={mominLogo} className="h-6" />
 					</Box>
-
-
 				</Toolbar>
 			</Container>
 		</AppBar >
