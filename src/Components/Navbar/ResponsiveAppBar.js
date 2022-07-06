@@ -27,7 +27,7 @@ const ResponsiveAppBar = () => {
 	};
 
 	return (
-		<AppBar position="static"
+		<AppBar position="static" variant='outlined'
 			sx={{
 				bgcolor: (theme) =>
 					theme.palette.mode === 'dark' ? 'black' : '#0101',
