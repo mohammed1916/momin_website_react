@@ -8,38 +8,26 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-import account from '../../img/icons/logo192.png'
+import mominLogo from '../../img/logo/logo.png'
 
-const pages = ['Home', 'Ongoing Projects', 'Completed Projects', 'About Us'];
-const settings = ['Contact Us'];
-const links = ['/', "#Ongoing", "#Completed", "/about"]
+const pages = ['Home', 'About Us'];
+const links = ['/', "/about"]
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
-	const [anchorElUser, setAnchorElUser] = React.useState(null);
-
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
-	};
-	const handleOpenUserMenu = (event) => {
-		setAnchorElUser(event.currentTarget);
 	};
 
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
 
-	const handleCloseUserMenu = () => {
-		setAnchorElUser(null);
-	};
-
 	return (
-		<AppBar position="static"
+		<AppBar position="static" variant='outlined'
 			sx={{
 				bgcolor: (theme) =>
 					theme.palette.mode === 'dark' ? 'black' : '#0101',
@@ -48,15 +36,6 @@ const ResponsiveAppBar = () => {
 			}}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
-					<Typography
-						variant="h6"
-						noWrap
-						component="div"
-						sx={{ mr: 5, display: { xs: 'none', md: 'flex' }, fontFamily: 'Cinzel Decorative' }}
-					>
-						Momin Developers
-					</Typography>
-
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
 						<IconButton
 							size="large"
@@ -97,60 +76,29 @@ const ResponsiveAppBar = () => {
 							))}
 						</Menu>
 					</Box>
-					<Typography
-						variant="p"
-						noWrap
-						component="div"
-						sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-					>
-						Momin Developers
-					</Typography>
-					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-						{pages.map((page, index) => (
-							<Button
-								key={page}
-								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: 'black', display: 'block' }}
-							>
-								<Link to={links[index]}>
-									{page}
-								</Link>
-							</Button>
-						))}
+					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignSelf: 'right', marginLeft: 'auto' }} >
+						{
+							pages.map((page, index) => (
+								<Button
+									key={page}
+									onClick={handleCloseNavMenu}
+									sx={{ my: 2, color: 'black', display: 'block' }}
+								>
+									<Link to={links[index]}>
+										{page}
+									</Link>
+								</Button>
+							))
+						}
+					</Box>
+					<Box sx={{ flexGrow: 0 }}>
+						<img alt="Icon" src={mominLogo} className="h-6" />
 					</Box>
 
-					<Box sx={{ flexGrow: 0 }}>
-						<Tooltip title="Contact Us">
-							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-								<Avatar alt="Contact" src={account} variant="square" />
-							</IconButton>
-						</Tooltip>
-						<Menu
-							sx={{ mt: '45px' }}
-							id="menu-appbar"
-							anchorEl={anchorElUser}
-							anchorOrigin={{
-								vertical: 'top',
-								horizontal: 'right',
-							}}
-							keepMounted
-							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'right',
-							}}
-							open={Boolean(anchorElUser)}
-							onClose={handleCloseUserMenu}
-						>
-							{settings.map((contact, index) => (
-								<MenuItem key={contact} onClick={handleCloseUserMenu}>
-									<Typography textAlign="center"><Link to={links[index]}>{contact}</Link></Typography>
-								</MenuItem>
-							))}
-						</Menu>
-					</Box>
+
 				</Toolbar>
 			</Container>
-		</AppBar>
+		</AppBar >
 	);
 };
 export default ResponsiveAppBar;
