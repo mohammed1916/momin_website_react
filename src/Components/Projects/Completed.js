@@ -9,21 +9,21 @@ import {
     useNavigate
 } from "react-router-dom";
 
-import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2.jpeg'
-import basavanagudi from '../../img/projects/basavanagudi/1.jpg'
-import greenEnclave from '../../img/projects/greenEnclave/1.JPG'
-import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/1.jpeg'
-import chennaiRoopasResidency from '../../img/projects/chennaiRoopasResidency/1.jpeg'
-import gangaNagarAslamsResidence from '../../img/projects/gangaNagarAslamsResidence/1.jpeg'
-import hbr from '../../img/projects/hbr/3.jpg'
-import hbr1 from '../../img/projects/hbr1/5.jpeg'
-import lingarajpuram from '../../img/projects/lingarajpuram/6.jpg'
-import pearlNestvadapalinichennai from '../../img/projects/pearlNestvadapalinichennai/2.jpeg'
-import kamanahali from '../../img/projects/kamanahali/4.jpg'
-import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
-import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4.jpeg'
-import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
-import interior from '../../img/projects/interior/9.jpeg'
+import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2Large.jpeg'
+import basavanagudi from '../../img/projects/basavanagudi/1Large.jpeg'
+import greenEnclave from '../../img/projects/greenEnclave/1Large.jpeg'
+import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/1Large.jpeg'
+import chennaiRoopasResidency from '../../img/projects/chennaiRoopasResidency/1Large.jpeg'
+import gangaNagarAslamsResidence from '../../img/projects/gangaNagarAslamsResidence/1Small.jpeg'
+import hbr from '../../img/projects/hbr/3Medium.jpeg'
+import hbr1 from '../../img/projects/hbr1/5Medium.jpeg'
+import lingarajpuram from '../../img/projects/lingarajpuram/6Medium.jpeg'
+import pearlNestvadapalinichennai from '../../img/projects/pearlNestvadapalinichennai/2Medium.jpeg'
+import kamanahali from '../../img/projects/kamanahali/4Medium.jpeg'
+import yeshwanthpur from '../../img/projects/yeshwanthpur/3Medium.jpeg'
+import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4Medium.jpeg'
+import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1Medium.jpeg'
+import interior from '../../img/projects/interior/9Small.jpeg'
 
 const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, loydsroadbanglore, mosqueroadbengalore, interior];
 const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR1", "Lingarajpuram", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Loyd's Road", "Mosque Road", "Interior"];
