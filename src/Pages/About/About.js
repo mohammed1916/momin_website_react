@@ -36,13 +36,13 @@ export default function About() {
                     Providing Service Since 1995
                 </div>
                 <div className="flex flex-row flex-wrap justify-evenly">
-                    <div className="pb-5 bg-cyan-900 rounded-full p-6">
+                    <div className="pb-5 bg-cyan-900 rounded-full p-6 m-3">
                         <MdPhone sx={{ fontSize: 120, color: "white" }} /><span className='font-semibold sm:lg:text-base lg:text-xl xl:lg:text-xl text-white'>+91 98450 41161</span>
                     </div>
-                    <div className="pb-5 bg-cyan-900 rounded-full p-6">
+                    <div className="pb-5 bg-cyan-900 rounded-full p-6 m-3">
                         <MdPhone sx={{ fontSize: 120, color: "white" }} /><span className='font-semibold sm:lg:text-base lg:text-xl xl:lg:text-xl text-white'>+91 99453 16717</span>
                     </div>
-                    <div className="pb-5 bg-cyan-900 rounded-full p-6">
+                    <div className="pb-5 bg-cyan-900 rounded-full p-6 m-3">
                         <MdPhone sx={{ fontSize: 120, color: "white" }} /><span className='font-semibold sm:lg:text-base lg:text-xl xl:lg:text-xl text-white'>+91 90943 64248</span>
                     </div>
                 </div>
