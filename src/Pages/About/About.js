@@ -13,7 +13,7 @@ export default function About() {
     return (
         < >
             <div className='p-5'>
-                <div className="text-center font-extrabold text-5xl text-cyan-800 p-6 pb-0">
+                <div className="text-center font-extrabold text-5xl p-6 pb-0">
                     MOMIN DEVELOPERS
                 </div>
                 <div className="text-center text-lg text-cyan-500 p-2">
@@ -29,20 +29,20 @@ export default function About() {
                 </div>
             </div>
             <div className='p-5'>
-                <div className="text-center font-bold text-5xl text-cyan-600 p-2">
+                <div className="text-center font-bold text-5xl p-2">
                     Contact Us
                 </div>
-                <div className="text-center textlgl text-cyan-300 p-2 pb-9">
+                <div className="text-center textlgl text-cyan-500 p-2 pb-9">
                     Providing Service Since 1995
                 </div>
                 <div className="flex flex-row flex-wrap justify-evenly">
-                    <div className="pb-5 bg-cyan-900 rounded-full p-6 m-3">
+                    <div className="pb-5 bg-black rounded-full p-6 m-3">
                         <MdPhone sx={{ fontSize: 120, color: "white" }} /><span className='font-semibold sm:lg:text-base lg:text-xl xl:lg:text-xl text-white'>+91 98450 41161</span>
                     </div>
-                    <div className="pb-5 bg-cyan-900 rounded-full p-6 m-3">
+                    <div className="pb-5 bg-black rounded-full p-6 m-3">
                         <MdPhone sx={{ fontSize: 120, color: "white" }} /><span className='font-semibold sm:lg:text-base lg:text-xl xl:lg:text-xl text-white'>+91 99453 16717</span>
                     </div>
-                    <div className="pb-5 bg-cyan-900 rounded-full p-6 m-3">
+                    <div className="pb-5 bg-black rounded-full p-6 m-3">
                         <MdPhone sx={{ fontSize: 120, color: "white" }} /><span className='font-semibold sm:lg:text-base lg:text-xl xl:lg:text-xl text-white'>+91 90943 64248</span>
                     </div>
                 </div>
