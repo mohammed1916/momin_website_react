@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
-import decoration from '../../img/decoration/decoration1.png'
+import decoration from '../../img/decoration/decoration1Small.jpeg'
 /* fontSize={{ xs: '20px', sm: '26px', md: '34px', lg: '46px' }} */
 export default function Home() {
 
