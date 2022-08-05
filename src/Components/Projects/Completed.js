@@ -18,16 +18,16 @@ import gangaNagarAslamsResidence from '../../img/projects/gangaNagarAslamsReside
 import hbr from '../../img/projects/hbr/3.jpg'
 import hbr1 from '../../img/projects/hbr1/5.jpeg'
 import lingarajpuram from '../../img/projects/lingarajpuram/6.jpg'
-import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4.jpeg'
 import pearlNestvadapalinichennai from '../../img/projects/pearlNestvadapalinichennai/2.jpeg'
 import kamanahali from '../../img/projects/kamanahali/4.jpg'
 import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
+import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4.jpeg'
 import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
 import interior from '../../img/projects/interior/9.jpeg'
 
-const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
-const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR1", "Lingarajpuram", "Loyd's Road", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Mosque Road", "Interior"];
-const cardAddress = ["Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Chennai, Tamil Nadu", "Ganganagar, Bangalore", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Vadapalini, Chennai", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka"];
+const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, loydsroadbanglore, mosqueroadbengalore, interior];
+const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR1", "Lingarajpuram", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Loyd's Road", "Mosque Road", "Interior"];
+const cardAddress = ["Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Chennai, Tamil Nadu", "Ganganagar, Bangalore", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Vadapalini, Chennai", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka"];
 
 export default function Completed() {
     let navigate = useNavigate();
