@@ -82,35 +82,7 @@ export default function Carousal() {
                                 </div>
                             ))}
                         </AutoPlaySwipeableViews>
-                        <MobileStepper
-                            steps={carousal[siteURLName].length}
-                            position="static"
-                            activeStep={activeStep}
-                            nextButton={
-                                <Button
-                                    size="small"
-                                    onClick={handleNext}
-                                    disabled={activeStep === carousal[siteURLName].length - 1}
-                                >
-                                    Next
-                                    {theme.direction === 'rtl' ? (
-                                        <KeyboardArrowLeft />
-                                    ) : (
-                                        <KeyboardArrowRight />
-                                    )}
-                                </Button>
-                            }
-                            backButton={
-                                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                    {theme.direction === 'rtl' ? (
-                                        <KeyboardArrowRight />
-                                    ) : (
-                                        <KeyboardArrowLeft />
-                                    )}
-                                    Back
-                                </Button>
-                            }
-                        />
+
                     </Box>
                 </section>
                 :
