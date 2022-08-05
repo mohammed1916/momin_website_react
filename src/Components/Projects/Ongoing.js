@@ -42,7 +42,7 @@ export default function Ongoing() {
                                         image={cardImg}
                                     />
                                     <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
+                                        <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
                                             {cardName[index]}
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary" textAlign={'center'}>

@@ -43,7 +43,7 @@ const ScrollNavBar = () => {
 		<AppBar position='sticky'
 			sx={{
 				bgcolor: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : '#0000',
+					theme.palette.mode === 'dark' ? 'black' : '#fff',
 				color: (theme) =>
 					theme.palette.mode === 'dark' ? 'black' : 'green',
 
