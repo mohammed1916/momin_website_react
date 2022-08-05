@@ -11,10 +11,9 @@ import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
 import { Link } from 'react-scroll'
 
 
-const pages = ['Home', 'Ongoing Projects', 'Completed Projects'];
-const links = ["#Home", "#Ongoing", "#Completed"]
+const pages = ['Ongoing Projects', 'Completed Projects'];
+const links = ["#Ongoing", "#Completed"]
 const icons = [
-	<HomeIcon fontSize="small" />,
 	<QueryBuilderIcon fontSize="small" />,
 	<ConstructionIcon fontSize="small" />,
 ]
@@ -23,7 +22,7 @@ const ScrollNavBar = () => {
 	const StyledBreadcrumb = styled(Chip)(({ theme }) => {
 		const backgroundColor =
 			theme.palette.mode === 'light'
-				? theme.palette.grey[100]
+				? theme.palette.grey[300]
 				: theme.palette.grey[800];
 		return {
 			backgroundColor,
@@ -44,7 +43,7 @@ const ScrollNavBar = () => {
 		<AppBar position='sticky'
 			sx={{
 				bgcolor: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : '#0101',
+					theme.palette.mode === 'dark' ? 'black' : '#0000',
 				color: (theme) =>
 					theme.palette.mode === 'dark' ? 'black' : 'green',
 
