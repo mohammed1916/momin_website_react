@@ -20,7 +20,7 @@ export default function About() {
                     Located at Banglore, Chennai and Tirunelveli
                 </div>
                 <div className="p-4 lg:pr-16 lg:pl-16 xl:pr-32 xl:pl-32">
-                    <div className="text-semibold text-justify pb-4">
+                    <div className="text-semibold text-justify pb-4 font-medium">
                         Welcome to Momin Developers, a subsidiary of Bluechip Constructions, a leading construction company started in the year 1995 in the cities of Chennai, bangalore and Tirunelveli. The firm has many years of experience in the building industry, having built several buildings since inception. Given the immense scope in the housing industry in India, the company has been focussing on promoting a series of large residential and commercial buildings in several areas in these cities. all the ventures promoted by the firm so far have been highly successful. Now it has successfully launched "Momin Elan" a luxurious residential apartment building in the heart of Bangalore with all modern amenities necessary for a luxurious living.
                     </div>
                     <div className="text-semibold text-justify">
