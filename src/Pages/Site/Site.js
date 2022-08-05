@@ -27,6 +27,7 @@ import { projects } from '../../store/projects.js'
 import { pdf } from '../../store/pdf.js'
 import { brocher } from '../../store/brochers.js'
 import { videos } from '../../store/videos.js'
+import { carousal } from '../../store/carousal.js'
 import Specification from '../../Components/Specifications/Specifications';
 import Address from '../../Components/Address/Address';
 import Carousal from '../../Components/Carousal/Carousal';
@@ -58,7 +59,15 @@ export default function Site() {
             <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 0.5, sm: 2 }}>Project Overview</Typography>
             <div className="bg-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <Carousal />
+                    {(typeof (carousal[siteURLName]) !== 'undefined')
+                        ?
+                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                            <Carousal />
+                        </div>
+                        :
+                        <div>
+                        </div>
+                    }
                     {(typeof (projects["Projects"][siteURLName]) !== 'undefined')
                         ?
                         <div className="max-w-2xl mx-auto pt-16 pb-3 sm:pt-24 sm:pb-5 lg:pt-32 lg:pb-7 lg:max-w-none">
