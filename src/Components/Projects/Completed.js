@@ -9,25 +9,25 @@ import {
     useNavigate
 } from "react-router-dom";
 
-import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2.jpeg'
-import basavanagudi from '../../img/projects/basavanagudi/1.jpg'
-import greenEnclave from '../../img/projects/greenEnclave/1.JPG'
-import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/1.jpeg'
-import chennaiRoopasResidency from '../../img/projects/chennaiRoopasResidency/1.jpeg'
-import gangaNagarAslamsResidence from '../../img/projects/gangaNagarAslamsResidence/1.jpeg'
-import hbr from '../../img/projects/hbr/3.jpg'
-import hbr1 from '../../img/projects/hbr1/6.jpg'
-import lingarajpuram from '../../img/projects/lingarajpuram/6.jpg'
-import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4.jpeg'
-import pearlNestvadapalinichennai from '../../img/projects/pearlNestvadapalinichennai/2.jpeg'
-import kamanahali from '../../img/projects/kamanahali/4.jpg'
-import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
-import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
-import interior from '../../img/projects/interior/9.jpeg'
+import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2Large.jpeg'
+import basavanagudi from '../../img/projects/basavanagudi/1Large.jpeg'
+import greenEnclave from '../../img/projects/greenEnclave/1Large.jpeg'
+import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/1Large.jpeg'
+import chennaiRoopasResidency from '../../img/projects/chennaiRoopasResidency/1Large.jpeg'
+import gangaNagarAslamsResidence from '../../img/projects/gangaNagarAslamsResidence/1Small.jpeg'
+import hbr from '../../img/projects/hbr/3Medium.jpeg'
+import hbr1 from '../../img/projects/hbr1/5Medium.jpeg'
+import lingarajpuram from '../../img/projects/lingarajpuram/6Medium.jpeg'
+import pearlNestvadapalinichennai from '../../img/projects/pearlNestvadapalinichennai/2Medium.jpeg'
+import kamanahali from '../../img/projects/kamanahali/4Medium.jpeg'
+import yeshwanthpur from '../../img/projects/yeshwanthpur/3Medium.jpeg'
+import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4Medium.jpeg'
+import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1Medium.jpeg'
+import interior from '../../img/projects/interior/9Small.jpeg'
 
-const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
-const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR", "Lingarajpuram", "Loyd's Road", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Mosque Road", "Interior"];
-const cardAddress = ["Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Chennai, Tamil Nadu", "Ganganagar, Bangalore", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Vadapalini, Chennai", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka"];
+const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, loydsroadbanglore, mosqueroadbengalore, interior];
+const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR1", "Lingarajpuram", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Loyd's Road", "Mosque Road", "Interior"];
+const cardAddress = ["Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Chennai, Tamil Nadu", "Ganganagar, Bangalore", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Vadapalini, Chennai", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka"];
 
 export default function Completed() {
     let navigate = useNavigate();
@@ -47,19 +47,21 @@ export default function Completed() {
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 1, sm: 2 }}>Completed</Typography>
                     <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' borderRadius={'20px'} padding={'10px'}>
                         {cards.map((cardImg, index) => (
-                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', ":hover": "boxShadow: 0 15px 70px -12px rgba(0,0,0,0.3)", boxShadow: 6 }} onClick={() => nav(cardName[index])}>
+                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', ":hover": "boxShadow: 0 15px 70px -12px rgba(0,0,0,0.3)", boxShadow: 6 }} onClick={() => nav(cardName[index])} className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:text-white duration-[2500]">
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
                                         height="200"
                                         image={cardImg}
                                     />
-                                    <CardContent>
-                                        <Typography color={'black'} gutterBottom variant="h5" component="div" textAlign={'center'}>
+                                    <CardContent className='flex items-center flex-col'>
+                                        <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
                                             {cardName[index]}
                                         </Typography>
-                                        <Typography color={'black'} variant="body2" textAlign={'center'}>
-                                            {cardAddress[index]}
+                                        <Typography variant="body2" className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+                                            <span className="relative text-white">
+                                                {cardAddress[index]}
+                                            </span>
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>

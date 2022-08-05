@@ -1,11 +1,4 @@
-import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea } from '@mui/material';
-import Box from '@mui/material/Box'
-import { useParams } from "react-router-dom";
 
 import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2.jpeg'
 import basavanagudi from '../../img/projects/basavanagudi/1.jpg'
@@ -33,9 +26,6 @@ import Address from '../../Components/Address/Address';
 import Carousal from '../../Components/Carousal/Carousal';
 
 
-const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, loydsroadbanglore, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, mosqueroadbengalore, interior];
-
-
 function getURLUsername(siteName) {
     const n = siteName.lastIndexOf('/');
     return (n != -1) ? siteName.substring(n + 1) : siteName;
@@ -46,12 +36,8 @@ function getUsername(siteName) {
 }
 
 export default function Site() {
-    // const params = useParams();
-    // var siteName = params.username;
-    // console.log("this.props.userID", getUsername(window.location.pathname));
     var siteName = getUsername(window.location.pathname);
     var siteURLName = getURLUsername(window.location.pathname);
-    console.log("siteURLName", getUsername(siteURLName));
 
     return (
         <>
@@ -61,7 +47,7 @@ export default function Site() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {(typeof (carousal[siteURLName]) !== 'undefined')
                         ?
-                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                        <div className="mt-6 ">
                             <Carousal />
                         </div>
                         :
@@ -79,7 +65,7 @@ export default function Site() {
                     }
                     {(typeof (projects["Projects"][siteURLName]) !== 'undefined')
                         ?
-                        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                        <div className="mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
                             {projects["Projects"][siteURLName].map((cardImg, index) => (
                                 <div key={cardImg}>

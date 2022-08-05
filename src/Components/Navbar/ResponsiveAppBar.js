@@ -79,15 +79,16 @@ const ResponsiveAppBar = () => {
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignSelf: 'right', marginLeft: 'auto' }} >
 						{
 							pages.map((page, index) => (
-								<Link to={links[index]}>
-									<Button
-										key={page}
-										onClick={handleCloseNavMenu}
-										sx={{ my: 2, color: 'black', display: 'block' }}
-									>
+								<Button
+									key={page}
+									onClick={handleCloseNavMenu}
+									sx={{ my: 2, color: 'black', display: 'block' }}
+									className="transition ease-in-out delay-150 hover:bg-black hover:text-green-900 duration-[2500]"
+								>
+									<Link to={links[index]} >
 										{page}
-									</Button>
-								</Link>
+									</Link>
+								</Button>
 							))
 						}
 					</Box>
