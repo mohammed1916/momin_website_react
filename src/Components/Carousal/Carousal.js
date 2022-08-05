@@ -67,9 +67,9 @@ export default function Carousal() {
                                 <div key={step.label}>
                                     {Math.abs(activeStep - index) <= 2 ? (
                                         <Box
+                                            className='md:h-96'
                                             component="img"
                                             sx={{
-                                                height: 850,
                                                 display: 'block',
 
                                                 overflow: 'hidden',
