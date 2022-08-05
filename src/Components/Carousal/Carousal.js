@@ -42,21 +42,7 @@ export default function Carousal() {
                 ?
                 <section className="flex justify-center p-6">
                     <Box sx={{ flexGrow: 1 }}>
-                        <Paper
-                            square
-                            elevation={0}
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                height: 50,
-                                pl: 2,
-                                bgcolor: 'background.default',
-                            }}
-                        >
 
-                            <Typography ><div className='text-2xl text-cyan-600 font-extrabold'>{carousal[siteURLName][activeStep].label}</div></Typography>
-
-                        </Paper>
                         <AutoPlaySwipeableViews
                             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                             index={activeStep}
