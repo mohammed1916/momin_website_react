@@ -47,19 +47,21 @@ export default function Completed() {
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 1, sm: 2 }}>Completed</Typography>
                     <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' borderRadius={'20px'} padding={'10px'}>
                         {cards.map((cardImg, index) => (
-                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', ":hover": "boxShadow: 0 15px 70px -12px rgba(0,0,0,0.3)", boxShadow: 6 }} onClick={() => nav(cardName[index])}>
+                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', ":hover": "boxShadow: 0 15px 70px -12px rgba(0,0,0,0.3)", boxShadow: 6 }} onClick={() => nav(cardName[index])} className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:text-white duration-[2500]">
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
                                         height="200"
                                         image={cardImg}
                                     />
-                                    <CardContent>
-                                        <Typography color={'black'} gutterBottom variant="h5" component="div" textAlign={'center'}>
+                                    <CardContent className='flex items-center flex-col'>
+                                        <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
                                             {cardName[index]}
                                         </Typography>
-                                        <Typography color={'black'} variant="body2" textAlign={'center'}>
-                                            {cardAddress[index]}
+                                        <Typography variant="body2" className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+                                            <span className="relative text-white">
+                                                {cardAddress[index]}
+                                            </span>
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
