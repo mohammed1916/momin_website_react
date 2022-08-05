@@ -9,7 +9,7 @@ import {
     useNavigate
 } from "react-router-dom";
 
-import moimnElan from '../../img/elevation/elevation1.jpg'
+import moimnElan from '../../img/elevation/elevation1Large.jpeg'
 
 
 const cards = [moimnElan];
