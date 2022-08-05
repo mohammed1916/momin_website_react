@@ -16,7 +16,7 @@ import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/
 import chennaiRoopasResidency from '../../img/projects/chennaiRoopasResidency/1.jpeg'
 import gangaNagarAslamsResidence from '../../img/projects/gangaNagarAslamsResidence/1.jpeg'
 import hbr from '../../img/projects/hbr/3.jpg'
-import hbr1 from '../../img/projects/hbr1/6.jpg'
+import hbr1 from '../../img/projects/hbr1/5.jpeg'
 import lingarajpuram from '../../img/projects/lingarajpuram/6.jpg'
 import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4.jpeg'
 import pearlNestvadapalinichennai from '../../img/projects/pearlNestvadapalinichennai/2.jpeg'
