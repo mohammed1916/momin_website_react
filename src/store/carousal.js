@@ -1,15 +1,15 @@
 export const carousal = {
     "Momin%20Elan": [
         {
-            label: 'Elevation',
+            label: 'ELEVATION',
             imgPath: require("../img/elevation/elevation.jpeg"),
         },
         {
-            label: 'Elevation',
+            label: 'ELEVATION',
             imgPath: require("../img/elevation/tiltBlack.jpeg"),
         },
         {
-            label: 'Elevation',
+            label: 'ELEVATION',
             imgPath: require("../img/elevation/tiltWhite.jpeg"),
         },
     ],
@@ -18,11 +18,11 @@ export const carousal = {
 export const elevationPlan = {
     "Momin%20Elan": [
         {
-            label: 'Top View',
+            label: 'TOP VIEW',
             imgPath: require("../img/elevation/1BAMLarge.jpeg"),
         },
         {
-            label: 'Top View',
+            label: 'TOP VIEW',
             imgPath: require("../img/elevation/2BAMLarge.jpeg"),
         },
     ],
