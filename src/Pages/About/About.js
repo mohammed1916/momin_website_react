@@ -12,6 +12,7 @@ import Ongoing from '../../Components/Projects/Ongoing';
 export default function About() {
     return (
         < >
+            <ResponsiveAppBar />
             <div className='p-5'>
                 <div className="text-center font-extrabold text-5xl p-6 pb-0">
                     MOMIN DEVELOPERS

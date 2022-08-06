@@ -1,10 +1,21 @@
 export const pages = {
-    "about": [{
-        label: 'Home',
-        path: '/'
-    }
+    "site": [
+        {
+            label: 'Home',
+            path: '/'
+        },
+        {
+            label: 'About Us',
+            path: '/about'
+        }
     ],
-    "home": [
+    "about": [
+        {
+            label: 'Home',
+            path: '/'
+        }
+    ],
+    "": [
         {
             label: 'About Us',
             path: '/about'

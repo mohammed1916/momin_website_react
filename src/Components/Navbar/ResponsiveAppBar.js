@@ -12,9 +12,12 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 import mominLogo from '../../img/logo/logo.png'
+import { pages } from '../../store/pages.js'
 
-const pages = ['Home', 'About Us'];
-const links = ['/', "/about"]
+// const pages = ['Home', 'About Us'];
+// const links = ['/', "/about"]
+
+
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -25,6 +28,49 @@ const ResponsiveAppBar = () => {
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
+	var s = window.location.pathname.split('/');
+	var siteURLName = s[1];
+	console.log("window.location.pathname=>", window.location.pathname)
+	console.log("siteURLName", s[1])
+	const [pageObj, setpageObj] = React.useState(pages[siteURLName]);
+	React.useEffect(() => {
+		setpageObj(pages[siteURLName]);
+	}, [window.location.pathname]);
+	console.log("pageObj=>", pageObj);
+
+	// if (pageObj === 'undefined') {
+	// 	setpageObj([
+	// 		{
+	// 			label: 'Home',
+	// 			path: '/'
+	// 		},
+	// 		{
+	// 			label: 'About Us',
+	// 			path: '/about'
+	// 		}
+	// 	]
+	// 	)
+	// } else {
+	// 	setpageObj(pages[siteURLName]);
+	// }
+	function getPage(pageObj) {
+		if (pageObj === 'undefined') {
+			setpageObj([
+				{
+					label: 'Home',
+					path: '/'
+				},
+				{
+					label: 'About Us',
+					path: '/about'
+				}
+			]
+			)
+		} else {
+			setpageObj(pages[siteURLName]);
+		}
+		return pageObj;
+	}
 
 	return (
 		<AppBar position="static" variant='outlined'
@@ -65,11 +111,11 @@ const ResponsiveAppBar = () => {
 								display: { xs: 'block', md: 'none' },
 							}}
 						>
-							{pages.map((page, index) => (
-								<Link to={links[index]}>
-									<MenuItem key={page} onClick={handleCloseNavMenu}>
+							{pageObj.map((page, index) => (
+								<Link to={page["path"]} key={page + index}>
+									<MenuItem onClick={handleCloseNavMenu}>
 										<Typography textAlign="center">
-											{page}
+											{page["label"]}
 										</Typography>
 									</MenuItem>
 								</Link>
@@ -78,15 +124,15 @@ const ResponsiveAppBar = () => {
 					</Box>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignSelf: 'right', marginLeft: 'auto' }} >
 						{
-							pages.map((page, index) => (
+							pageObj.map((page, index) => (
 								<Button
-									key={page}
+									key={page + index}
 									onClick={handleCloseNavMenu}
 									sx={{ my: 2, color: 'black', display: 'block' }}
 									className="transition ease-in-out delay-150 hover:bg-black hover:text-green-900 duration-[2500]"
 								>
-									<Link to={links[index]} >
-										{page}
+									<Link to={page["path"]} >
+										{page["label"]}
 									</Link>
 								</Button>
 							))

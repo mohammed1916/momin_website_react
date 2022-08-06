@@ -14,7 +14,6 @@ function getURLUsername(siteName) {
 
 export default function Carousal() {
     var siteURLName = getURLUsername(window.location.pathname);
-    // console.log("carousal[siteURLName]", carousal[siteURLName]);
 
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
