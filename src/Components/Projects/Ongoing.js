@@ -37,7 +37,7 @@ export default function Ongoing() {
                             <Card
                                 sx={{ maxWidth: 250, padding: '10px', margin: '20px', boxShadow: 5 }}
                                 onClick={() => nav(cardName[index])}
-                                className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:text-white duration-[2500]"
+                                className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:shadow-fuchsia-900 hover:shadow-xl hover:text-white duration-[2500]"
                             >
                                 <CardActionArea>
                                     <CardMedia
