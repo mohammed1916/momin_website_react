@@ -125,16 +125,17 @@ const ResponsiveAppBar = () => {
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignSelf: 'right', marginLeft: 'auto' }} >
 						{
 							pageObj.map((page, index) => (
-								<Button
-									key={page + index}
-									onClick={handleCloseNavMenu}
-									sx={{ my: 2, color: 'black', display: 'block' }}
-									className="transition ease-in-out delay-150 hover:bg-black hover:text-green-900 duration-[2500]"
-								>
-									<Link to={page["path"]} >
+								<Link
+									to={page["path"]}
+									className="shadow-lg rounded-lg mr-2 bg-gray-500 transition hover:bg-gray-700 hover:-translate-y-1 duration-[2500]">
+									<Button
+										key={page + index}
+										onClick={handleCloseNavMenu}
+										sx={{ color: 'white', display: 'block' }}
+									>
 										{page["label"]}
-									</Link>
-								</Button>
+									</Button>
+								</Link>
 							))
 						}
 					</Box>
