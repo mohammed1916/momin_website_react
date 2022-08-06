@@ -1,18 +1,8 @@
-import { ThemeProvider, createTheme, rgbToHex } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Icon from '@mui/material/Icon';
 import MdPhone from '@mui/icons-material/Phone';
-import Chip from '@mui/material/Chip';
-import ResponsiveAppBar from '../../Components/Navbar/ResponsiveAppBar';
-import Footer from '../../Components/Footer/Footer';
-import Home from '../../Components/Home/Home';
-import Completed from '../../Components/Projects/Completed';
-import Ongoing from '../../Components/Projects/Ongoing';
 
 export default function About() {
     return (
         < >
-            <ResponsiveAppBar />
             <div className='p-5'>
                 <div className="text-center font-extrabold text-5xl p-6 pb-0">
                     MOMIN DEVELOPERS
