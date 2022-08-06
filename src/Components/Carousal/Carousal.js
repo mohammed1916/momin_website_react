@@ -1,11 +1,7 @@
 import React from 'react';
-import Box from '@mui/material/Box'
-import { useTheme } from '@mui/material/styles';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import { carousal } from '../../store/carousal.js'
+import { carousal, elevationPlan, elevationImg } from '../../store/carousal.js'
+import CarousalComponent from './CarousalComponent.js';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 function getURLUsername(siteName) {
     const n = siteName.lastIndexOf('/');
@@ -14,37 +10,14 @@ function getURLUsername(siteName) {
 
 export default function Carousal() {
     var siteURLName = getURLUsername(window.location.pathname);
-
-    const [activeStep, setActiveStep] = React.useState(0);
-
-    const handleStepChange = (step) => {
-        setActiveStep(step);
-    };
+    var data = carousal[siteURLName];
+    var data1 = elevationPlan[siteURLName];
+    var data2 = elevationImg[siteURLName];
     return (
         <>
-            {(typeof (carousal[siteURLName]) !== 'undefined')
-                ?
-                <section className="flex justify-center p-6">
-                    {carousal[siteURLName].map((step, index) => (
-                        <div key={step.label}>
-                            {Math.abs(activeStep - index) <= 2 ? (
-                                <Box
-                                    component="img"
-                                    sx={{
-                                        display: 'block',
-                                        overflow: 'hidden',
-                                    }}
-                                    src={step.imgPath}
-                                    alt={step.label}
-                                />
-                            ) : null}
-                        </div>
-                    ))}
-                </section>
-                :
-                <div>
-                </div>
-            }
+            <img src={data2[0].imgPath} />
+            <CarousalComponent data={data} maxWidth={1080} />
+            <CarousalComponent data={data1} maxWidth={591} />
         </>
     );
 }
