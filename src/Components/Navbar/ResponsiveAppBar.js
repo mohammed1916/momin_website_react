@@ -73,7 +73,8 @@ const ResponsiveAppBar = () => {
 							{pageObj.map((page, index) => (
 								<Link to={page["path"]} key={page + index}>
 									<MenuItem onClick={handleCloseNavMenu}>
-										<Typography textAlign="center">
+										{page["icon"]}
+										<Typography textAlign="center" padding={"5px"}>
 											{page["label"]}
 										</Typography>
 									</MenuItem>
@@ -90,8 +91,10 @@ const ResponsiveAppBar = () => {
 									<Button
 										key={page + index}
 										onClick={handleCloseNavMenu}
-										sx={{ color: 'white', display: 'block' }}
+										sx={{ color: 'white' }}
 									>
+										{page["icon"]}
+										<div className="p-1" />
 										{page["label"]}
 									</Button>
 								</Link>
