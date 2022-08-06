@@ -6,7 +6,7 @@ export const pages = {
         },
         {
             label: 'Contact Us',
-            path: 'contact'
+            path: '/contact'
         }
     ],
     "contact": [
@@ -18,7 +18,7 @@ export const pages = {
     "": [
         {
             label: 'Contact Us',
-            path: 'contact'
+            path: '/contact'
         }
     ]
 
