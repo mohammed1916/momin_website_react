@@ -55,10 +55,10 @@ export default function Site() {
 
                             {projects["Projects"][siteURLName].map((cardImg, index) => (
                                 <div key={cardImg}>
-                                    <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
+                                    <div className="bg-gray-200 rounded-md overflow-hidden aspect-none">
                                         <img
                                             src={cardImg}
-                                            className=" w-full object-center hover:object-scale-down"
+                                            className=" w-full object-center"
                                         />
                                     </div>
                                 </div>
