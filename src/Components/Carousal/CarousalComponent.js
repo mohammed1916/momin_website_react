@@ -36,6 +36,23 @@ export default function CarousalComponent(props) {
                 ?
                 <section className="flex justify-center p-6">
                     <Box sx={{ maxWidth: props.maxWidth }}>
+                        <Paper
+                            square
+                            elevation={0}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                height: 50,
+                                pl: 2,
+                                bgcolor: 'background.default',
+                            }}
+                        >
+                            <Typography >
+                                <div className='text-2xl text-black font-extrabold font-sans'>
+                                    {props.data[activeStep].label}
+                                </div>
+                            </Typography>
+                        </Paper>
                         <MobileStepper
                             steps={data.length}
                             position="static"
