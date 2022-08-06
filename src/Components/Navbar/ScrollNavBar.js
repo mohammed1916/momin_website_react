@@ -5,7 +5,6 @@ import Container from '@mui/material/Container';
 import { emphasize, styled } from '@mui/material/styles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Chip from '@mui/material/Chip';
-import HomeIcon from '@mui/icons-material/Home';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
 import { Link } from 'react-scroll'

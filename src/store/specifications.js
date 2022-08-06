@@ -6,7 +6,7 @@ export const Specifications = {
         },
         {
             title: "Flooring",
-            description: "Lobby, stair case and lift area will be provided with granite. Living area and bedrooms will be privided with vetrified flooring. Antiskid ceramic tiles in toilets."
+            description: "Lobby, stair case and lift area will be provided with granite. Living area and bedrooms will be provided with vitrified flooring. Antiskid ceramic tiles in toilets."
         },
         {
             title: "Doors",

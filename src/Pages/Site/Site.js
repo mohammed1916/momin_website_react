@@ -1,21 +1,5 @@
 import Typography from '@mui/material/Typography';
 
-import kamraniKaizenTirunelveli from '../../img/projects/kamraniKaizenTirunelveli/2.jpeg'
-import basavanagudi from '../../img/projects/basavanagudi/1.jpg'
-import greenEnclave from '../../img/projects/greenEnclave/1.JPG'
-import bangloreTelephoneLayout from '../../img/projects/bangloreTelephoneLayout/1.jpeg'
-import chennaiRoopasResidency from '../../img/projects/chennaiRoopasResidency/1.jpeg'
-import gangaNagarAslamsResidence from '../../img/projects/gangaNagarAslamsResidence/1.jpeg'
-import hbr from '../../img/projects/hbr/3.jpg'
-import hbr1 from '../../img/projects/hbr1/6.jpg'
-import lingarajpuram from '../../img/projects/lingarajpuram/6.jpg'
-import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4.jpeg'
-import pearlNestvadapalinichennai from '../../img/projects/pearlNestvadapalinichennai/2.jpeg'
-import kamanahali from '../../img/projects/kamanahali/4.jpg'
-import yeshwanthpur from '../../img/projects/yeshwanthpur/3.jpeg'
-import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1.jpeg'
-import interior from '../../img/projects/interior/9.jpeg'
-
 import { projects } from '../../store/projects.js'
 import { pdf } from '../../store/pdf.js'
 import { brocher } from '../../store/brochers.js'
@@ -71,10 +55,10 @@ export default function Site() {
 
                             {projects["Projects"][siteURLName].map((cardImg, index) => (
                                 <div key={cardImg}>
-                                    <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
+                                    <div className="bg-gray-200 rounded-md overflow-hidden aspect-none">
                                         <img
                                             src={cardImg}
-                                            className=" w-full object-center hover:object-scale-down"
+                                            className=" w-full object-center"
                                         />
                                     </div>
                                 </div>

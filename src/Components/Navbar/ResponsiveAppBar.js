@@ -14,11 +14,6 @@ import MenuItem from '@mui/material/MenuItem';
 import mominLogo from '../../img/logo/logo.png'
 import { pages } from '../../store/pages.js'
 
-// const pages = ['Home', 'About Us'];
-// const links = ['/', "/about"]
-
-
-
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
 	const handleOpenNavMenu = (event) => {
@@ -38,47 +33,11 @@ const ResponsiveAppBar = () => {
 	}, [window.location.pathname]);
 	console.log("pageObj=>", pageObj);
 
-	// if (pageObj === 'undefined') {
-	// 	setpageObj([
-	// 		{
-	// 			label: 'Home',
-	// 			path: '/'
-	// 		},
-	// 		{
-	// 			label: 'About Us',
-	// 			path: '/about'
-	// 		}
-	// 	]
-	// 	)
-	// } else {
-	// 	setpageObj(pages[siteURLName]);
-	// }
-	function getPage(pageObj) {
-		if (pageObj === 'undefined') {
-			setpageObj([
-				{
-					label: 'Home',
-					path: '/'
-				},
-				{
-					label: 'About Us',
-					path: '/about'
-				}
-			]
-			)
-		} else {
-			setpageObj(pages[siteURLName]);
-		}
-		return pageObj;
-	}
-
 	return (
 		<AppBar position="static" variant='outlined'
 			sx={{
-				bgcolor: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : '#0101',
-				color: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : 'green',
+				bgcolor: '#0101',
+				color: 'green',
 			}}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
