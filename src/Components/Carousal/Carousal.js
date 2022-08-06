@@ -15,7 +15,6 @@ function getURLUsername(siteName) {
 export default function Carousal() {
     var siteURLName = getURLUsername(window.location.pathname);
 
-    const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
 
     const handleStepChange = (step) => {
@@ -30,13 +29,10 @@ export default function Carousal() {
                         <div key={step.label}>
                             {Math.abs(activeStep - index) <= 2 ? (
                                 <Box
-                                    className='h-fit'
                                     component="img"
                                     sx={{
                                         display: 'block',
-
                                         overflow: 'hidden',
-                                        width: '100%',
                                     }}
                                     src={step.imgPath}
                                     alt={step.label}
