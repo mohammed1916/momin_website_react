@@ -25,6 +25,7 @@ export default function Carousal() {
     var data2 = elevationImg[siteURLName];
     return (
         <>
+            <img src={data2[0].imgPath} />
             <CarousalComponent data={data} maxWidth={1080} />
             <CarousalComponent data={data1} maxWidth={591} />
         </>
