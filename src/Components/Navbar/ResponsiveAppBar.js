@@ -36,10 +36,8 @@ const ResponsiveAppBar = () => {
 	return (
 		<AppBar position="static" variant='outlined'
 			sx={{
-				bgcolor: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : '#0101',
-				color: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : 'green',
+				bgcolor: '#0101',
+				color: 'green',
 			}}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
