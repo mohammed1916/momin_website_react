@@ -5,11 +5,11 @@ export const pages = {
             path: '/'
         },
         {
-            label: 'About Us',
-            path: '/about'
+            label: 'Contact Us',
+            path: 'contact'
         }
     ],
-    "about": [
+    "contact": [
         {
             label: 'Home',
             path: '/'
@@ -17,8 +17,8 @@ export const pages = {
     ],
     "": [
         {
-            label: 'About Us',
-            path: '/about'
+            label: 'Contact Us',
+            path: 'contact'
         }
     ]
 
