@@ -1,8 +1,10 @@
 import MdPhone from '@mui/icons-material/Phone';
+import ResponsiveAppBar from '../../Components/Navbar/ResponsiveAppBar';
 
 export default function About() {
     return (
         < >
+            <ResponsiveAppBar />
             <div className='p-5'>
                 <div className="text-center font-extrabold text-5xl p-6 pb-0">
                     MOMIN DEVELOPERS
