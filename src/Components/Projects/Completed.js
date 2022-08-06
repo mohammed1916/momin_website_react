@@ -47,7 +47,7 @@ export default function Completed() {
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 1, sm: 2 }}>Completed</Typography>
                     <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' borderRadius={'20px'} padding={'10px'}>
                         {cards.map((cardImg, index) => (
-                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', ":hover": "boxShadow: 0 15px 70px -12px rgba(0,0,0,0.3)", boxShadow: 6 }} onClick={() => nav(cardName[index])} className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:text-white duration-[2500]">
+                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', ":hover": "boxShadow: 0 15px 70px -12px rgba(0,0,0,0.3)", boxShadow: 6 }} onClick={() => nav(cardName[index])} className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:shadow-fuchsia-900 hover:shadow-xl hover:text-white duration-[2500]">
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
