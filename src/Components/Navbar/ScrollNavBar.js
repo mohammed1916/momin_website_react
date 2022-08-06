@@ -19,20 +19,18 @@ const icons = [
 
 const ScrollNavBar = () => {
 	const StyledBreadcrumb = styled(Chip)(({ theme }) => {
-		const backgroundColor =
-			theme.palette.mode === 'light'
-				? theme.palette.grey[300]
-				: theme.palette.grey[800];
+		const backgroundColor = theme.palette.grey[300]
+
 		return {
 			backgroundColor,
 			height: theme.spacing(3),
-			color: theme.palette.text.primary,
+			color: 'black',
 			fontWeight: theme.typography.fontWeightRegular,
 			'&:hover, &:focus': {
 				backgroundColor: emphasize(backgroundColor, 0.06),
 			},
 			'&:active': {
-				boxShadow: theme.shadows[1],
+				boxShadow: theme.shadows[2],
 				backgroundColor: emphasize(backgroundColor, 0.12),
 			},
 		};
@@ -41,10 +39,8 @@ const ScrollNavBar = () => {
 	return (
 		<AppBar position='sticky'
 			sx={{
-				bgcolor: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : '#fff',
-				color: (theme) =>
-					theme.palette.mode === 'dark' ? 'black' : 'green',
+				bgcolor: '#fff',
+				color: 'green',
 
 			}}>
 			<Container maxWidth="xl">
