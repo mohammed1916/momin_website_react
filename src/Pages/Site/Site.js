@@ -24,6 +24,7 @@ import { carousal } from '../../store/carousal.js'
 import Specification from '../../Components/Specifications/Specifications';
 import Address from '../../Components/Address/Address';
 import Carousal from '../../Components/Carousal/Carousal';
+import ResponsiveAppBar from '../../Components/Navbar/ResponsiveAppBar';
 
 
 function getURLUsername(siteName) {
@@ -41,6 +42,7 @@ export default function Site() {
 
     return (
         <>
+            <ResponsiveAppBar />
             <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'34px'} color={'orange'} pt={{ xs: 0.5, sm: 1 }}>{siteName}</Typography>
             <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 0.5, sm: 2 }}>Project Overview</Typography>
             <div className="bg-gray-100">

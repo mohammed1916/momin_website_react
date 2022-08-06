@@ -11,6 +11,7 @@ const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 export default function Start() {
     return (
         < >
+            <ResponsiveAppBar />
             <ScrollNavBar />
             <Offset />
             <Home />

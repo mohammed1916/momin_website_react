@@ -32,21 +32,29 @@ export default function Ongoing() {
                 <Container sx={{ width: '100%' }}>
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'34px'} color={'orange'} pt={{ xs: 0.5, sm: 1 }}>Projects</Typography>
                     <Typography textAlign="center" fontFamily={'Righteous'} fontSize={'44px'} color={'#ddd'} pt={{ xs: 0.5, sm: 2 }}>Ongoing</Typography>
-                    <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#eee'} borderRadius={'20px'} padding={'10px'}>
+                    <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#eee'} borderRadius={'20px'} padding={'10px'} boxShadow={10}>
                         {cards.map((cardImg, index) => (
-                            <Card sx={{ maxWidth: 250, padding: '10px', margin: '20px', boxShadow: 5 }} onClick={() => nav(cardName[index])}>
+                            <Card
+                                sx={{ maxWidth: 250, padding: '10px', margin: '20px', boxShadow: 5 }}
+                                onClick={() => nav(cardName[index])}
+                                className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:text-white duration-[2500]"
+                            >
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
                                         height="200"
                                         image={cardImg}
                                     />
-                                    <CardContent>
+                                    <CardContent className='flex items-center flex-col'>
                                         <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
                                             {cardName[index]}
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" textAlign={'center'}>
-                                            {cardAddress[index]}
+                                        <Typography variant="body2"
+                                            className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block"
+                                        >
+                                            <span className="relative text-white">
+                                                {cardAddress[index]}
+                                            </span>
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
