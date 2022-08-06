@@ -28,7 +28,7 @@ export const elevationPlan = {
     ],
 
 }
-export const img = {
+export const elevationImg = {
     "Momin%20Elan": [
         {
             label: 'Momin Elan',
