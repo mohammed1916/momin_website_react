@@ -25,13 +25,10 @@ const ResponsiveAppBar = () => {
 	};
 	var s = window.location.pathname.split('/');
 	var siteURLName = s[1];
-	console.log("window.location.pathname=>", window.location.pathname)
-	console.log("siteURLName", s[1])
 	const [pageObj, setpageObj] = React.useState(pages[siteURLName]);
 	React.useEffect(() => {
 		setpageObj(pages[siteURLName]);
 	}, [window.location.pathname]);
-	console.log("pageObj=>", pageObj);
 
 	return (
 		<AppBar position="static" variant='outlined'
