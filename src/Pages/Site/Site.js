@@ -1,3 +1,9 @@
+import { Viewer, Worker } from '@react-pdf-viewer/core';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+
 import Typography from '@mui/material/Typography';
 
 import { projects } from '../../store/projects.js'
@@ -5,6 +11,7 @@ import { pdf } from '../../store/pdf.js'
 import { brocher } from '../../store/brochers.js'
 import { videos } from '../../store/videos.js'
 import { carousal } from '../../store/carousal.js'
+import kamranikaizenBrochure from "../../img/projects/kamraniKaizenTirunelveli/kamranikaizenBrochure.pdf"
 import Specification from '../../Components/Specifications/Specifications';
 import Address from '../../Components/Address/Address';
 import Carousal from '../../Components/Carousal/Carousal';
@@ -21,6 +28,7 @@ function getUsername(siteName) {
 }
 
 export default function Site() {
+    const defaultLayoutPluginInstance = defaultLayoutPlugin();
     var siteName = getUsername(window.location.pathname);
     var siteURLName = getURLUsername(window.location.pathname);
 
@@ -111,12 +119,11 @@ export default function Site() {
                     }
                     {(typeof (pdf["pdf"][siteURLName]) !== 'undefined')
                         ?
-                        <div className="max-w-2xl mx-auto pb-3  sm:pb-5  lg:pb-7 lg:max-w-none">
-                            <div>
-                                <object data={pdf["pdf"][siteURLName]} type="application/pdf" width="100%" height="700px">
-                                    <p>Pdf View is not compatible with this browser</p>
-                                </object>
-                            </div>
+                        <div height='750px'>
+                            <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js">
+                                {/* <Viewer fileUrl="../../img/projects/kamraniKaizenTirunelveli/kamranikaizenBrochure.pdf" */}
+                                <Viewer fileUrl={kamranikaizenBrochure}></Viewer>
+                            </Worker>
                         </div>
                         :
                         <div>
