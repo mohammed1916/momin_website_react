@@ -40,8 +40,7 @@ const ScrollNavBar = () => {
 		<AppBar position='sticky'
 			sx={{
 				bgcolor: '#fff',
-				color: 'green',
-
+				color: 'black',
 			}}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters variant='dense'>
