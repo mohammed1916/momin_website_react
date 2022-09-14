@@ -34,7 +34,7 @@ const ResponsiveAppBar = () => {
 		<AppBar position="static" variant='outlined'
 			sx={{
 				bgcolor: '#0101',
-				color: 'green',
+				color: 'black',
 			}}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
