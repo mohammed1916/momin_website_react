@@ -9,7 +9,7 @@ import {
     useNavigate
 } from "react-router-dom";
 
-import moimnElan from '../../img/elevation/elevation1Large.jpeg'
+import moimnElan from '../../img/elevation/elevation.jpeg'
 
 
 const cards = [moimnElan];
@@ -35,7 +35,7 @@ export default function Ongoing() {
                     <Box display={'flex'} flexWrap={'wrap'} justifyContent='space-evenly' bgcolor={'#eee'} borderRadius={'20px'} padding={'10px'} boxShadow={10}>
                         {cards.map((cardImg, index) => (
                             <Card
-                                sx={{ maxWidth: 250, padding: '10px', margin: '20px', boxShadow: 5 }}
+                                sx={{ maxWidth: 350, padding: '10px', margin: '20px', boxShadow: 5 }}
                                 onClick={() => nav(cardName[index])}
                                 className="transition ease-in-out delay-150 hover:-translate-y-3 hover:scale-110 hover:bg-black hover:shadow-fuchsia-900 hover:shadow-xl hover:text-white duration-[2500]"
                             >
