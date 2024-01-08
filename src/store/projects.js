@@ -152,5 +152,8 @@ export const projects = {
             require("../img/projects/interior/17.jpeg"),
 
         ],
+        "Aasim's%20Residence": [
+            require("../img/elevation/elevation1Large.jpeg")
+        ]
     }
 }

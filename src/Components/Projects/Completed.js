@@ -24,10 +24,11 @@ import yeshwanthpur from '../../img/projects/yeshwanthpur/3Medium.jpeg'
 import loydsroadbanglore from '../../img/projects/loydsroadbanglore/4Medium.jpeg'
 import mosqueroadbengalore from '../../img/projects/mosqueroadbengalore/1Medium.jpeg'
 import interior from '../../img/projects/interior/9Small.jpeg'
+import asimsResidence from '../../img/elevation/elevation1Large.jpeg'
 
-const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, loydsroadbanglore, mosqueroadbengalore, interior];
-const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR1", "Lingarajpuram", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Loyd's Road", "Mosque Road", "Interior"];
-const cardAddress = ["Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Chennai, Tamil Nadu", "Ganganagar, Bangalore", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Vadapalini, Chennai", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka"];
+const cards = [kamraniKaizenTirunelveli, basavanagudi, greenEnclave, bangloreTelephoneLayout, chennaiRoopasResidency, gangaNagarAslamsResidence, hbr, hbr1, lingarajpuram, pearlNestvadapalinichennai, kamanahali, yeshwanthpur, loydsroadbanglore, mosqueroadbengalore, interior, asimsResidence];
+const cardName = ["Kamrani Kaizen", "Basavanagudi", "Green Enclave", "Banglore Telephone Layout", "Chennai Roopas Residency", "Ganga Nagar", "HBR", "HBR1", "Lingarajpuram", "Pearl Nest", "Kamanahali", "Yeshwanthpur", "Loyd's Road", "Mosque Road", "Interior", "Aasim's Residence"];
+const cardAddress = ["Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Tirunelveli, Tamil Nadu", "Bangalore, Karnataka", "Chennai, Tamil Nadu", "Ganganagar, Bangalore", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Vadapalini, Chennai", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Bangalore, Karnataka", "Banglore"];
 
 export default function Completed() {
     let navigate = useNavigate();
